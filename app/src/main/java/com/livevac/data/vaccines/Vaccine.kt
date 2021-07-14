@@ -11,5 +11,5 @@ data class Vaccine(
     val vacId: Int,
     val name: String,
     val description: String,
-    val image: Image,
+    val image: ByteArray,
 )

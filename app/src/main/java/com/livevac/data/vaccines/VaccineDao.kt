@@ -12,6 +12,6 @@ interface VaccineDao {
     fun getAll(): LiveData<List<Vaccine>>
 
     @Transaction
-    @Query("SELECT * FROM dosage_table")
+    @Query("SELECT * FROM vaccine_table")
     fun getAllVaccinesWithDosage(): LiveData<List<VaccineWithDosage>>
 }

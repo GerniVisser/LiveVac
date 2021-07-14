@@ -6,11 +6,15 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.livevac.data.animals.Animal
 import com.livevac.data.animals.AnimalDao
+import com.livevac.data.dosage.Dosage
+import com.livevac.data.vaccines.Vaccine
+import com.livevac.data.vaccines.VaccineDao
 
-@Database(entities = [Animal::class], version = 1)
+@Database(entities = [Animal::class, Vaccine::class, Dosage::class], version = 1, exportSchema = false)
 abstract class DataBase: RoomDatabase() {
 
     abstract fun AnimalDao(): AnimalDao
+    abstract fun VaccineDao(): VaccineDao
 
     companion object{
         @Volatile

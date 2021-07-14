@@ -13,5 +13,5 @@ data class Animal(
     val type: String,
     val breed: String,
     val gender: String,
-    val dateOfBirth: Date
+    val dob: Long
 )

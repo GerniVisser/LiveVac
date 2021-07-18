@@ -4,4 +4,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">My Herd</string>
     <string name="title_notifications">Vaccines</string>
+    <string name="lbl_next_vac">Next Vaccination</string>
+    <string name="lbl_herd">Herd</string>
+    <string name="lbl_livestock">Amount of livestocks</string>
 </resources>

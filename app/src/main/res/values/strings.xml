@@ -10,5 +10,12 @@
     <string name="btn_add_herd">+</string>
     <string name="btn_add_livestock">Add Livestock</string>
     <string name="btn_add_vaccine">Add Vaccine</string>
-
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="lbl_addlivestock">ADD A LIVESTOCK</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_type">Type</string>
+    <string name="lbl_breed">Breed</string>
+    <string name="lbl_sex">Sex</string>
+    <string name="lbl_dob">DOB</string>
 </resources>

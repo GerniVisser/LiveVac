@@ -6,29 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lbl_herd" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/calendarView" />
+
     <TextView
         android:id="@+id/txt_herd_amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="23"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_disease" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:layout_editor_absoluteY="435dp" />
 
     <TextView
         android:id="@+id/lbl_livestock"
-        android:text="@string/lbl_livestock"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:text="@string/lbl_livestock"
         app:layout_constraintEnd_toStartOf="@+id/txt_herd_amount"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_disease" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:layout_editor_absoluteY="435dp" />
 
     <CalendarView
         android:id="@+id/calendarView"
-        android:layout_width="0dp"
-        android:layout_height="338dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -49,24 +64,23 @@
         android:id="@+id/txt_date_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="01/01/200-"
         app:layout_constraintEnd_toStartOf="@+id/txt_date_end"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_herd" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
         android:id="@+id/txt_date_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="03/01/2000"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/txt_date_start"
-        app:layout_constraintTop_toBottomOf="@+id/txt_herd_no" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        tools:layout_editor_absoluteY="435dp" />
 
     <TextView
         android:id="@+id/txt_herd_no"
@@ -97,7 +111,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendarView" />
+        app:layout_constraintTop_toBottomOf="@id/guideline4" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"

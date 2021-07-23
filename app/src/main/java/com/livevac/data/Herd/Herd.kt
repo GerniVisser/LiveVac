@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "herd_table")
 data class Herd (
     @PrimaryKey(autoGenerate = true)
-    val animalId: Int,
-    val herdID: Int
+    val herdId: Int,
+    val name: String
 )

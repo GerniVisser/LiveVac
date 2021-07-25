@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.livevac.ui.dashboard.DashboardFragment"
+        android:name="com.livevac.ui.herd.HerdFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_herd" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.livevac.ui.notifications.NotificationsFragment"
+        android:name="com.livevac.ui.vaccines.VaccinesFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_vaccines" />
 </navigation>

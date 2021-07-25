@@ -1,4 +1,4 @@
-package com.livevac.ui.dashboard
+package com.livevac.ui.vaccines
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,19 +7,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.livevac.R
-import com.livevac.databinding.FragmentAddLivestockBinding
+import com.livevac.databinding.FragmentAddVaccineBinding
 
 /**
  * An example full-screen fragment that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class AddHerdFragment : Fragment() {
+class AddVaccineFragment : Fragment() {
     private val hideHandler = Handler()
 
     @Suppress("InlinedApi")
@@ -58,18 +54,12 @@ class AddHerdFragment : Fragment() {
         false
     }
 
-    /*
     private var dummyButton: Button? = null
-     */
     private var fullscreenContent: View? = null
     private var fullscreenContentControls: View? = null
 
-    private var _binding: FragmentAddLivestockBinding? = null
-    private var name : EditText? =null
-    private var type : Spinner? = null
-    private var breed : Spinner? = null
-    private var sex : Spinner? = null
-    private var dob : EditText? = null
+    private var _binding: FragmentAddVaccineBinding? = null
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
@@ -80,7 +70,7 @@ class AddHerdFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentAddLivestockBinding.inflate(inflater, container, false)
+        _binding = FragmentAddVaccineBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -90,26 +80,16 @@ class AddHerdFragment : Fragment() {
 
         visible = true
 
-        name = binding.edxName
-        type = binding.spnType
-        breed = binding.spnBreed
-        sex = binding.spnSex
-        dob = binding.dteDob
-
-        /*
         dummyButton = binding.dummyButton
         fullscreenContent = binding.fullscreenContent
         fullscreenContentControls = binding.fullscreenContentControls
-        */
         // Set up the user interaction to manually show or hide the system UI.
         fullscreenContent?.setOnClickListener { toggle() }
 
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
-        /*
         dummyButton?.setOnTouchListener(delayHideTouchListener)
-         */
     }
 
     override fun onResume() {
@@ -133,17 +113,9 @@ class AddHerdFragment : Fragment() {
 
     override fun onDestroy() {
         super.onDestroy()
-        /*
         dummyButton = null
         fullscreenContent = null
         fullscreenContentControls = null
-        */
-
-        name = null
-        type = null
-        breed = null
-        sex = null
-        dob = null
     }
 
     private fun toggle() {

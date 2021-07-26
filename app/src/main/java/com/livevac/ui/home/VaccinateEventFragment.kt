@@ -161,7 +161,6 @@ class VaccinateEventFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance(HFID: UUID) = VaccinateEventFragment()
         /**
          * Whether or not the system UI should be auto-hidden after
          * [AUTO_HIDE_DELAY_MILLIS] milliseconds.

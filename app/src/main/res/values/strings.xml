@@ -18,4 +18,5 @@
     <string name="lbl_breed">Breed</string>
     <string name="lbl_sex">Sex</string>
     <string name="lbl_dob">DOB</string>
+    <string name="btn_vaccine_event">Vaccinate</string>
 </resources>

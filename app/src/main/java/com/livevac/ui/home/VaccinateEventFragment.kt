@@ -1,4 +1,4 @@
-package com.livevac.ui.notifications
+package com.livevac.ui.home
 
 import android.os.Bundle
 import android.os.Handler
@@ -9,14 +9,14 @@ import android.view.WindowManager
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.livevac.R
-import com.livevac.databinding.FragmentAddVaccineBinding
+import com.livevac.databinding.FragmentVaccinateEventBinding
+import java.util.*
 
 /**
  * An example full-screen fragment that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class AddVaccineFragment : Fragment() {
+class VaccinateEventFragment : Fragment() {
     private val hideHandler = Handler()
 
     @Suppress("InlinedApi")
@@ -59,7 +59,7 @@ class AddVaccineFragment : Fragment() {
     private var fullscreenContent: View? = null
     private var fullscreenContentControls: View? = null
 
-    private var _binding: FragmentAddVaccineBinding? = null
+    private var _binding: FragmentVaccinateEventBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -71,7 +71,7 @@ class AddVaccineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentAddVaccineBinding.inflate(inflater, container, false)
+        _binding = FragmentVaccinateEventBinding.inflate(inflater, container, false)
         return binding.root
 
     }

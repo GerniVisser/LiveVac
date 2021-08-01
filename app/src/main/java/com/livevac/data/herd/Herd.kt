@@ -1,4 +1,4 @@
-package com.livevac.data.Herd
+package com.livevac.data.herd
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

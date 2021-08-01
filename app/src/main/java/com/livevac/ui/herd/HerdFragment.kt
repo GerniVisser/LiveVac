@@ -28,15 +28,21 @@ class HerdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val addLivestockButton : Button = binding.btnAddLivestock
         val addHerdButton: Button = binding.btnAddHerd
-        val addLivestockFragment: Button = binding.btnAddLivestock
+
+
         addHerdButton.setOnClickListener {
+            Log.d("Testing","herd clickerd")
             val action = HerdFragmentDirections.actionNavigationDashboardToAddHerdFragment()
             findNavController().navigate(action)
         }
-        addLivestockFragment.setOnClickListener {
-            val action = HerdFragmentDirections.actionNavigationDashboardToAddLivestockFragment()
-            findNavController().navigate(action)
+        addLivestockButton.setOnClickListener {
+            Log.d("Testing","Clicked")
+            val action1 = HerdFragmentDirections.actionNavigationDashboardToAddLivestockFragment()
+            findNavController().navigate(action1)
+            Toast.makeText(requireContext(), "Livestock", Toast.LENGTH_LONG).show()
+
         }
 
 
@@ -47,6 +53,7 @@ class HerdFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         herdViewModel =
             ViewModelProvider(this).get(HerdViewModel::class.java)

@@ -8,10 +8,12 @@ import java.util.*
 data class Animal(
     @PrimaryKey(autoGenerate = true)
     val animalId: Int,
-    val herdID: Int,
+    val herdId: Int,
+    //val identity: String,
     val name: String,
     val type: String,
     val breed: String,
     val gender: String,
     val dob: Long
 )
+//passed

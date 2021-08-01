@@ -40,20 +40,21 @@
     <fragment
         android:id="@+id/vaccinateEventFragment"
         android:name="com.livevac.ui.home.VaccinateEventFragment"
-        android:label="fragment_vaccinate_event"
+        android:label="Vaccinate"
         tools:layout="@layout/fragment_vaccinate_event" />
     <fragment
         android:id="@+id/addLivestockFragment"
         android:name="com.livevac.ui.herd.AddLivestockFragment"
-        android:label="AddLivestockFragment" />
+        android:label="Add Livestock"
+        tools:layout="@layout/fragment_add_livestock"/>
     <fragment
         android:id="@+id/addVaccineFragment"
         android:name="com.livevac.ui.vaccines.AddVaccineFragment"
-        android:label="fragment_add_vaccine"
+        android:label="Add a vaccine"
         tools:layout="@layout/fragment_add_vaccine" />
     <fragment
         android:id="@+id/addHerdFragment"
         android:name="com.livevac.ui.herd.AddHerdFragment"
-        android:label="fragment_add_livestock"
-        tools:layout="@layout/fragment_add_livestock" />
+        android:label="Add Herd"
+        tools:layout="@layout/fragment_add_herd" />
 </navigation>

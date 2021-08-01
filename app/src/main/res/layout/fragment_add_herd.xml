@@ -1,53 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?attr/fullscreenBackgroundColor"
+
+    tools:context=".ui.herd.AddHerdFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/fullscreenBackgroundColor"
-        android:theme="@style/ThemeOverlay.LiveVac.FullscreenContainer"
-        tools:context=".ui.herd.AddLivestockFragment">
 
-        <!-- The primary full-screen view. This can be replaced with whatever view
-             is needed to present your content, e.g. VideoView, SurfaceView,
-             TextureView, etc. -->
+        android:theme="@style/ThemeOverlay.LiveVac.FullscreenContainer" >
+
         <TextView
-            android:id="@+id/fullscreen_content"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:keepScreenOn="true"
-            android:text="@string/dummy_content"
-            android:textColor="?attr/fullscreenTextColor"
-            android:textSize="50sp"
-            android:textStyle="bold" />
+            android:id="@+id/lbl_choose_herd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/lbl_herd_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- This FrameLayout insets its children based on system windows using
-             android:fitsSystemWindows. -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
+        <EditText
+            android:id="@+id/txt_herd_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_choose_herd"
+            tools:text="@tools:sample/lorem" />
 
-            <LinearLayout
-                android:id="@+id/fullscreen_content_controls"
-                style="@style/Widget.Theme.LiveVac.ButtonBar.Fullscreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:orientation="horizontal"
-                tools:ignore="UselessParent">
+        <Button
+            android:id="@+id/btn_save_herd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/lbl_save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-                <Button
-                    android:id="@+id/dummy_button"
-                    style="?android:attr/buttonBarButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/dummy_button" />
 
-            </LinearLayout>
-        </FrameLayout>
-
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <layout>
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/fullscreenBackgroundColor"
+            android:theme="@style/ThemeOverlay.LiveVac.FullscreenContainer"
+            tools:context=".ui.herd.AddLivestockFragment">
+
+             The primary full-screen view. This can be replaced with whatever view
+                 is needed to present your content, e.g. VideoView, SurfaceView,
+                 TextureView, etc.
+            <TextView
+                android:id="@+id/fullscreen_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:keepScreenOn="true"
+                android:text="@string/dummy_content"
+                android:textColor="?attr/fullscreenTextColor"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+             This FrameLayout insets its children based on system windows using
+                 android:fitsSystemWindows.
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:id="@+id/fullscreen_content_controls"
+                    style="@style/Widget.Theme.LiveVac.ButtonBar.Fullscreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <Button
+                        android:id="@+id/dummy_button"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/dummy_button" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+    </layout>
+        -->

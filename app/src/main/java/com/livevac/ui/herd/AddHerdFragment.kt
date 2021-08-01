@@ -16,7 +16,7 @@ import java.util.*
  * An example full-screen fragment that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class AddLivestockFragment : Fragment() {
+class AddHerdFragment : Fragment() {
     private val hideHandler = Handler()
 
     @Suppress("InlinedApi")
@@ -81,9 +81,9 @@ class AddLivestockFragment : Fragment() {
 
         visible = true
 
-        dummyButton = binding.dummyButton
-        fullscreenContent = binding.fullscreenContent
-        fullscreenContentControls = binding.fullscreenContentControls
+        dummyButton = binding.btnSaveHerd
+        //fullscreenContent = binding.fullscreenContent
+        //fullscreenContentControls = binding.fullscreenContentControls
         // Set up the user interaction to manually show or hide the system UI.
         fullscreenContent?.setOnClickListener { toggle() }
 

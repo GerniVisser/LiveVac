@@ -1,8 +1,7 @@
-package com.livevac.data.Herd
+package com.livevac.data.herd
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.livevac.data.animals.Animal
 
 @Dao
 interface HerdDao {
@@ -11,4 +10,8 @@ interface HerdDao {
 
     @Query("SELECT * FROM herd_table")
     fun getAll(): LiveData<List<Herd>>
+
+    @Transaction
+    @Query("SELECT * FROM animal_table")
+    fun getAllHerdWithAnimal(): LiveData<List<HerdAnimalRelation>>
 }

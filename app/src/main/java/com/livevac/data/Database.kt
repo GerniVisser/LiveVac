@@ -9,7 +9,7 @@ import com.livevac.data.animals.AnimalDao
 import com.livevac.data.herd.Herd
 import com.livevac.data.herd.HerdDao
 
-@Database(entities = [Animal::class], version = 1, exportSchema = false)
+@Database(entities = [Animal::class, Herd::class], version = 1, exportSchema = false)
 abstract class DataBase: RoomDatabase() {
 
     abstract fun animalDao(): AnimalDao
